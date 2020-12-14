@@ -4,6 +4,18 @@
 # Log file
 *.log
 
+# idea
+*.iml
+# 忽略文件夹下所有内容
+*.idea/
+mvnw.cmd
+mvnw
+
+# Java class files
+*.class
+# Generated files
+bin/
+
 # BlueJ files
 *.ctxt
 
