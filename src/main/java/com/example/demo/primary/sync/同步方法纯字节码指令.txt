@@ -1,0 +1,20 @@
+Compiled from "同步方法.java"
+public class com.example.demo.primary.sync.同步方法 {
+  public int i;
+
+  public com.example.demo.primary.sync.同步方法();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public synchronized void syncTask();
+    Code:
+       0: aload_0
+       1: dup
+       2: getfield      #2                  // Field i:I
+       5: iconst_1
+       6: iadd
+       7: putfield      #2                  // Field i:I
+      10: return
+}
