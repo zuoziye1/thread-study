@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
+ * 出现死锁
+ *
  * @Author: 姚飞虎
  * @Date: 2020/12/30 10:27 上午
  * @Description:
