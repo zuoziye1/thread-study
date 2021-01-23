@@ -1,0 +1,31 @@
+Compiled from "单例模式的应用.java"
+public class com.example.demo.primary.volatile学习.单例模式的应用 {
+  public com.example.demo.primary.volatile学习.单例模式的应用 getSingle();
+    Code:
+       0: getstatic     #2                  // Field single:Lcom/example/demo/primary/volatile学习/单例模式的应用;
+       3: ifnonnull     37
+       6: ldc           #3                  // class com/example/demo/primary/volatile学习/单例模式的应用
+       8: dup
+       9: astore_1
+      10: monitorenter
+      11: getstatic     #2                  // Field single:Lcom/example/demo/primary/volatile学习/单例模式的应用;
+      14: ifnonnull     27
+      17: new           #3                  // class com/example/demo/primary/volatile学习/单例模式的应用
+      20: dup
+      21: invokespecial #4                  // Method "<init>":()V
+      24: putstatic     #2                  // Field single:Lcom/example/demo/primary/volatile学习/单例模式的应用;
+      27: aload_1
+      28: monitorexit
+      29: goto          37
+      32: astore_2
+      33: aload_1
+      34: monitorexit
+      35: aload_2
+      36: athrow
+      37: getstatic     #2                  // Field single:Lcom/example/demo/primary/volatile学习/单例模式的应用;
+      40: areturn
+    Exception table:
+       from    to  target type
+          11    29    32   any
+          32    35    32   any
+}

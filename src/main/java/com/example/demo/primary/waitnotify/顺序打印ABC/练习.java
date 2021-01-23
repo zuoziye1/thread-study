@@ -12,8 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class 练习 {
 
     public static void main(String[] args) throws InterruptedException {
-
-
+        正常();
     }
 
     public static void 正常() throws InterruptedException {
@@ -43,7 +42,6 @@ public class 练习 {
         /**
          * 其实感觉这里也会有死锁的可能，但是没有复现出来
          */
-
         for (int i = 0; i < 10; i++) {
             new Print("A", c, a).start();
             new Print("B", a, b).start();
