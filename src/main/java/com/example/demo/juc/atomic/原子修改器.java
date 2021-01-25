@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
  * @Date: 2021/1/19 4:25 下午
  * @Description:
  */
-public class AtomicReferenceFieldUpdaterTest {
+public class 原子修改器 {
 
     public static void main(String[] args) throws Exception {
         AtomicReferenceFieldUpdater updater = AtomicReferenceFieldUpdater.newUpdater(Dog.class, String.class, "name");
