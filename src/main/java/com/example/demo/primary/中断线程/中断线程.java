@@ -1,5 +1,7 @@
 package com.example.demo.primary.中断线程;
 
+import com.example.demo.juc.aqs.LockSupport使用;
+
 /**
  * 怎么终止一个线程
  *
@@ -42,6 +44,13 @@ public class 中断线程 {
                  *      * #join(long, int)}, {@link #sleep(long)}, or {@link #sleep(long, int)},
                  *      * methods of this class, then its interrupt status will be cleared and it
                  *      * will receive an {@link InterruptedException}.
+                 *
+                 *
+                 *      这里说明了 wait,join,sleep 三者可以响应中断，而且会抛出异常
+                 *
+                 *      // @see com.my.package.Class＃method（） 通过这种方式可以跳转到别的代码地方
+                 *      @see LockSupport使用#test4()
+                 *      而LockSupport的park会响应中断，但是不会抛出异常
                  *
                  *      这里说明了在经历阻塞方法时，中断状态就被清空了,同时还要抛出一个中断异常
                  */

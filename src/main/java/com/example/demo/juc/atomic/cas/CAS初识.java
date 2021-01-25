@@ -13,6 +13,7 @@ public class CAS初识 {
 
     public static void main(String[] args) {
         AtomicInteger atomicInteger = new AtomicInteger(5);
+        // 底层是：unsafe.compareAndSwapInt(this, valueOffset, expect, update)
         System.out.println(atomicInteger.compareAndSet(5,50));
         System.out.println(atomicInteger.compareAndSet(5,100));
 
