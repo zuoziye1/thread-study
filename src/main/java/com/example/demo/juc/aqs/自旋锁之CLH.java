@@ -1,5 +1,8 @@
 package com.example.demo.juc.aqs;
 
+import java.util.concurrent.atomic.AtomicReference;
+
+
 /**
  * 代码参考：https://cloud.tencent.com/developer/article/1187386
  *
@@ -7,12 +10,7 @@ package com.example.demo.juc.aqs;
  * @Date: 2021/1/19 11:43 上午
  * @Description:
  */
-import java.util.concurrent.atomic.AtomicReference;
-
-/**
- * Created by qindongliang on 2018/8/5.
- */
-public class 自旋锁之CLHLock {
+public class 自旋锁之CLH {
 
     class Node{
         //false代表没人占用锁
@@ -30,7 +28,7 @@ public class 自旋锁之CLHLock {
     final   ThreadLocal<Node> current;
 
 
-    public 自旋锁之CLHLock(){
+    public 自旋锁之CLH(){
         //初始化当前节点的node
         current=new ThreadLocal<Node>(){
             @Override
@@ -114,7 +112,7 @@ public class 自旋锁之CLHLock {
      */
     public static void main(String[] args) throws InterruptedException {
 
-        自旋锁之CLHLock lock=new 自旋锁之CLHLock();
+        自旋锁之CLH lock=new 自旋锁之CLH();
 
         System.out.println("最开始时，没有线程竞争的情况下，当前线程的tail的node:"+lock.tail.get().hashCode());
         System.out.println("最开始时，没有线程竞争的情况下，当前线程的current的node:"+lock.current.get().hashCode());
